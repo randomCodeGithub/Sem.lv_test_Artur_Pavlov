@@ -50,12 +50,14 @@ $(document).ready(function () {
   // === SCROLLING ===
 
   let anchorLink = document.getElementById("anchor-link");
+  let timer = null;
+
   
-  anchorLink.addEventListener("click", function () {
+//SCROLL TO TOP 
+anchorLink.addEventListener("click", function () {
   window.scrollTo(0, 0);
 });
 
-  let timer = null;
 // IF NOT SCROLLING EVENT LISTENER
 window.addEventListener(
   "scroll",
