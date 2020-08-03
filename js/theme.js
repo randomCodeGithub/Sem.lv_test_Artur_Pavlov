@@ -65,36 +65,3 @@ window.addEventListener(
 
 
  });
-
- //   let toggle = true;
-//   //adding icon to toggler
-
-//   $(".navbar-toggler").click(function () {
-//     if (toggle) {
-//       $(".navbar-light .navbar-toggler-icon").css(
-//         "background-image",
-//         'url("../img/mobile/close-btn.svg")'
-//       );
-//       toggle = false;
-//     } else {
-//       $(".navbar-light .navbar-toggler-icon").css(
-//         "background-image",
-//         'url("../img/mobile/menu-toggler.svg")'
-//       );
-//       toggle = true;
-//     }
-//   });
-
-//   let anchorLink = $("#anchor-link");
-//   let timer = null;
-
-//   $(window).scroll(function () {
-//     if (timer != null) {
-//       clearTimeout(timer);
-//     }
-
-//     timer = setTimeout(function() {
-//       if($(window).innerHeight() + $(window).scrollTop() >= )
-
-//     }, 1000);
-//   }, false);
