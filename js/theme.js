@@ -25,6 +25,7 @@ $(document).ready(function () {
     }
     $(this).remove();
   });
+ });
 
   // === SCROLLING ===
 
@@ -66,6 +67,3 @@ window.addEventListener(
   },
   true
 );
-
-
- });
