@@ -225,6 +225,20 @@ p {
 /* === INPUT, BUTTONS ===
 */
 
+.anchor-link {
+  bottom: 5%;
+  right: 5%;
+  width: 35px;
+  height: 35px;
+  background-color: #ff0000;
+  display: none;
+  border-radius: 50%;
+  cursor: pointer; 
+  border: 0;
+  z-index: 3;
+  border: 1px solid #000;
+}
+
 button {
   color: #fff !important;
   background-color: #ffa800 !important;
