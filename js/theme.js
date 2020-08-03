@@ -29,6 +29,10 @@ $(document).ready(function () {
   // === SCROLLING ===
 
   let anchorLink = document.getElementById("anchor-link");
+  
+  anchorLink.addEventListener("click", function () {
+  window.scrollTo(0, 0);
+});
 
   let timer = null;
 // IF NOT SCROLLING EVENT LISTENER
