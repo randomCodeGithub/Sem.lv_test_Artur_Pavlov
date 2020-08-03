@@ -4,7 +4,7 @@ $(document).ready(function () {
     //iedvesmas stāsti
     for (let index = 21; index < 100; index++) {
       $(".stasti-gallery").append(
-        '<div class="col-6 col-md-3 d-none col-lg-2"><img class="img-fluid" src="./img/iedvesmas-stasti/background.jpg" alt=""><p class="number">' +
+        '<div class="col-6 col-md-3 d-none d-lg-block col-lg-2"><img class="img-fluid" src="./img/iedvesmas-stasti/background.jpg" alt=""><p class="number">' +
           index +
           "</p></div>"
       );
