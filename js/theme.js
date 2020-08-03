@@ -33,13 +33,13 @@ $(document).ready(function () {
     if (toggle) {
       $(".navbar-light .navbar-toggler-icon").css(
         "background-image",
-        'url("../img/mobile/close-btn.svg")'
+        'url("./img/mobile/close-btn.svg")'
       );
       toggle = false;
     } else {
       $(".navbar-light .navbar-toggler-icon").css(
         "background-image",
-        'url("../img/mobile/menu-toggler.svg")'
+        'url("./img/mobile/menu-toggler.svg")'
       );
       toggle = true;
     }
