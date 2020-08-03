@@ -25,6 +25,26 @@ $(document).ready(function () {
     }
     $(this).remove();
   });
+  
+     let toggle = true;
+  //adding icon to toggler
+
+  $(".navbar-toggler").click(function () {
+    if (toggle) {
+      $(".navbar-light .navbar-toggler-icon").css(
+        "background-image",
+        'url("../img/mobile/close-btn.svg")'
+      );
+      toggle = false;
+    } else {
+      $(".navbar-light .navbar-toggler-icon").css(
+        "background-image",
+        'url("../img/mobile/menu-toggler.svg")'
+      );
+      toggle = true;
+    }
+  });
+  
  });
 
   // === SCROLLING ===
