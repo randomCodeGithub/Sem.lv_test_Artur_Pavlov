@@ -4,7 +4,7 @@ $(document).ready(function () {
     //iedvesmas stāsti
     for (let index = 21; index < 100; index++) {
       $(".stasti-gallery").append(
-        '<div class="col-6 col-md-3 d-none col-lg-2"><img class="img-fluid" src="./img/iedvesmas-stasti/background.jpg" alt=""><p class="number">' +
+        '<div class="col-6 col-md-3 d-none d-lg-block col-lg-2"><img class="img-fluid" src="./img/iedvesmas-stasti/background.jpg" alt=""><p class="number">' +
           index +
           "</p></div>"
       );
@@ -25,6 +25,27 @@ $(document).ready(function () {
     }
     $(this).remove();
   });
+  
+     let toggle = true;
+  //adding icon to toggler
+
+  $(".navbar-toggler").click(function () {
+    if (toggle) {
+      $(".navbar-light .navbar-toggler-icon").css(
+        "background-image",
+        'url("./img/mobile/close-btn.svg")'
+      );
+      toggle = false;
+    } else {
+      $(".navbar-light .navbar-toggler-icon").css(
+        "background-image",
+        'url("./img/mobile/menu-toggler.svg")'
+      );
+      toggle = true;
+    }
+  });
+  
+ });
 
   //  === SCROLLING ===
  
@@ -63,24 +84,3 @@ $(document).ready(function () {
  },
  true
  );
-
-  let toggle = true;
-  //adding icon to toggler
-
-  $(".navbar-toggler").click(function () {
-    if (toggle) {
-      $(".navbar-light .navbar-toggler-icon").css(
-        "background-image",
-        'url("./img/mobile/close-btn.svg")'
-      );
-      toggle = false;
-    } else {
-      $(".navbar-light .navbar-toggler-icon").css(
-        "background-image",
-        'url("./img/mobile/menu-toggler.svg")'
-      );
-      toggle = true;
-    }
-  });
-  
- });
