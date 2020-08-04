@@ -26,75 +26,61 @@ $(document).ready(function () {
     $(this).remove();
   });
 
-  // === SCROLLING ===
+  //  === SCROLLING ===
+ 
+ let anchorLink = document.getElementById("anchor-link");
+ 
+ let timer = null;
+ // IF NOT SCROLLING EVENT LISTENER
+ window.addEventListener(
+ "scroll",
+ function () {
+   if (timer !== null) {
+     clearTimeout(timer);
+   }
+   timer = setTimeout(function () {
+     if (
+       !((window.innerHeight + window.scrollY + (document.getElementById("footer").offsetHeight))  >= document.body.offsetHeight)
+     ) {
+       anchorLink.style.display = "none";
+     } else {
+       anchorLink.style.display = "flex";
+     }
+   }, 1000);
+ },
+ false
+ );
+ console.log(document.getElementById("footer").offsetHeight);
+ 
+ // IF NOT SCROLLING EVENT LISTENER
+ window.addEventListener(
+ "scroll",
+ function () {
+   anchorLink.style.display = "flex";
+   if (window.scrollY == 0) {
+     anchorLink.style.display = "none";
+   }
+ },
+ true
+ );
 
-  let anchorLink = document.getElementById("anchor-link");
+  let toggle = true;
+  //adding icon to toggler
 
-  let timer = null;
-// IF NOT SCROLLING EVENT LISTENER
-window.addEventListener(
-  "scroll",
-  function () {
-    if (timer !== null) {
-      clearTimeout(timer);
+  $(".navbar-toggler").click(function () {
+    if (toggle) {
+      $(".navbar-light .navbar-toggler-icon").css(
+        "background-image",
+        'url("./img/mobile/close-btn.svg")'
+      );
+      toggle = false;
+    } else {
+      $(".navbar-light .navbar-toggler-icon").css(
+        "background-image",
+        'url("./img/mobile/menu-toggler.svg")'
+      );
+      toggle = true;
     }
-    timer = setTimeout(function () {
-      if (
-        !(window.innerHeight + window.scrollY >= document.body.offsetHeight)
-      ) {
-        anchorLink.style.display = "none";
-      } else {
-        anchorLink.style.display = "flex";
-      }
-    }, 1000);
-  },
-  false
-);
-
-// IF NOT SCROLLING EVENT LISTENER
-window.addEventListener(
-  "scroll",
-  function () {
-    anchorLink.style.display = "flex";
-    if (window.scrollY == 0) {
-      anchorLink.style.display = "none";
-    }
-  },
-  true
-);
-
-
+  });
+  
  });
-
- //   let toggle = true;
-//   //adding icon to toggler
-
-//   $(".navbar-toggler").click(function () {
-//     if (toggle) {
-//       $(".navbar-light .navbar-toggler-icon").css(
-//         "background-image",
-//         'url("../img/mobile/close-btn.svg")'
-//       );
-//       toggle = false;
-//     } else {
-//       $(".navbar-light .navbar-toggler-icon").css(
-//         "background-image",
-//         'url("../img/mobile/menu-toggler.svg")'
-//       );
-//       toggle = true;
-//     }
-//   });
-
-//   let anchorLink = $("#anchor-link");
-//   let timer = null;
-
-//   $(window).scroll(function () {
-//     if (timer != null) {
-//       clearTimeout(timer);
-//     }
-
-//     timer = setTimeout(function() {
-//       if($(window).innerHeight() + $(window).scrollTop() >= )
-
-//     }, 1000);
-//   }, false);
